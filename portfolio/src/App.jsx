@@ -31,11 +31,11 @@ function App() {
       <div  className="relative z-10 text-white  ">
         {/* <h1>Hello</h1> */}
 
-        <section  className="pt-40 h-screen" data-aos="fade-up" style={{height: "100vh"}} >
+        <section id="home" className="pt-40 h-screen" data-aos="fade-up" style={{height: "100vh"}} >
           <Home />
         </section>
 
-        <section  className="pt-40 pb-40 h-screen" data-aos="fade-up" style={{height: "130vh"}} >
+        <section id="experience" className="pt-40 pb-40 h-screen" data-aos="fade-up" style={{height: "130vh"}} >
           <div className="text-6xl grid flex justify-center p-10 text-neutral-950">
             <h1>Experience</h1>
           </div>
@@ -45,11 +45,11 @@ function App() {
           </div>
         </section>
         
-        <section  data-aos="fade-up" className="flex justify-center pt-40 pb-100 h-screen" style={{height: "170vh"}} >
+        <section id="projects" data-aos="fade-up" className="flex justify-center pt-40 pb-100 h-screen" style={{height: "170vh"}} >
           <Projects />
         </section>
 
-        <section className="pt-40 h-screen" style={{height: "50vh", background: "#5f5464" }} data-aos="fade-up" >
+        <section id="contact" className="pt-40 h-screen" style={{height: "50vh", background: "#5f5464" }} data-aos="fade-up" >
           <Contact />
         </section>
 
