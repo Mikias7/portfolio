@@ -3,11 +3,12 @@ import LiquidEther from "./blocks/LiquidEther/LiquidEther"
 import Home from "./pages/Home"
 import Nav from "./components/Nav"
 import Experience from "./pages/Experience"
+import Projects from "./pages/Projects"
 
 function App() {
 
   return (
-    <div className="relative w-full h-screen" style={{height: "200vh"}}>
+    <div className="relative w-full h-screen" style={{height: "350vh"}}>
 
       <div>
         <Nav />
@@ -24,7 +25,7 @@ function App() {
           <Home />
         </section>
 
-        <section  className="pt-40" data-aos="fade-up" >
+        <section  className="pt-40" data-aos="fade-up" style={{height: "100vh"}} >
           <div className="text-6xl grid flex justify-center p-10 text-neutral-950">
             <h1>Experience</h1>
           </div>
@@ -34,6 +35,10 @@ function App() {
           </div>
         </section>
         
+        <section  className="pt-40" data-aos="fade-up" style={{height: "100vh"}} >
+          <Projects />
+        </section>
+
       </div>
 
 
