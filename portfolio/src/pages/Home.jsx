@@ -1,4 +1,5 @@
 import DecryptedText from "../blocks/DecryptedText";
+import TextTrail from "../blocks/TextTrail/TextTrail";
 
 function Home(){
 
@@ -12,6 +13,7 @@ function Home(){
             <div className=" grid flex justify-center pt-8 pr-8 pl-8 text-neutral-950 text-justify">
                 <h1 className=" text-6xl font-bold font-sans tracking-wide">G'day, I'm</h1>
                 {/* <h1 className="text-6xl font-bold font-sans tracking-wide">Mikias Tadele,</h1> */}
+                
                 <div className="text-6xl font-bold font-sans tracking-wide">
                     <DecryptedText 
                         text="Mikias Tadele," 
