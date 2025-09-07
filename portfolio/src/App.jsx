@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen" style={{height: "410vh"}}>
+    <div className="relative w-full h-screen" style={{height: "410vh", background: "#e7b2ee50"}}>
 
       <div>
         <Nav />
@@ -31,7 +31,7 @@ function App() {
       <div  className="relative z-10 text-white  ">
         {/* <h1>Hello</h1> */}
 
-        <section id="home" className="pt-40 h-screen" data-aos="fade-up" style={{height: "100vh"}} >
+        <section id="home" className="pt-80 h-screen" data-aos="fade-up" style={{height: "100vh"}} >
           <Home />
         </section>
 
@@ -49,7 +49,7 @@ function App() {
           <Projects />
         </section>
 
-        <section id="contact" className="pt-40 h-screen" style={{height: "50vh", background: "#5f5464" }} data-aos="fade-up" >
+        <section id="contact" className="pt-40 h-screen" style={{height: "50vh", background: "#5f546450" }} data-aos="fade-up" >
           <Contact />
         </section>
 
