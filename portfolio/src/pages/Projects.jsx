@@ -1,4 +1,5 @@
 import ChromaGrid from "../blocks/ChromaGrid/ChromaGrid";
+import GradientText from "../blocks/GradientText/GradientText";
 
 function Projects() {
   const items = [
@@ -88,8 +89,15 @@ function Projects() {
 
   return (
     <div>
-      <div>
-        <h1>Projects</h1>
+      <div className="text-6xl grid flex pb-10">
+        <GradientText
+            colors={["#ff40dfff", "#000000ff", "#000000ff", "#000000ff", "#ff40dfff"]}
+            animationSpeed={3}
+            showBorder={false}
+            className="custom-class"
+            >
+            Projects
+        </GradientText>
       </div>
 
       <div className="flex">

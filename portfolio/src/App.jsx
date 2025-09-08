@@ -10,7 +10,7 @@ import Projects from "./pages/Projects"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from "./pages/Contact"
-
+import GradientText from "./blocks/GradientText/GradientText"
 function App() {
 
   useEffect(() => {
@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen" style={{height: "410vh", background: "#e7b2ee50"}}>
+    <div className="relative w-full h-screen" style={{height: "460vh", background: "#e7b2ee50"}}>
 
       <div>
         <Nav />
@@ -36,8 +36,16 @@ function App() {
         </section>
 
         <section id="experience" className="pt-40 pb-40 h-screen" data-aos="fade-up" style={{height: "130vh"}} >
-          <div className="text-6xl grid flex justify-center p-10 text-neutral-950">
-            <h1>Experience</h1>
+          <div className="text-6xl grid flex justify-left p-10 text-neutral-950">
+            {/* <h1>Experience</h1> */}
+            <GradientText
+                colors={["#000000ff", "#ff40dfff", "#ff40dfff", "#ff40dfff", "#ff40dfff"]}
+                animationSpeed={3}
+                showBorder={false}
+                className="custom-class"
+                >
+                Experience
+            </GradientText>
           </div>
           <div>
             <div><Experience /></div>
@@ -45,17 +53,15 @@ function App() {
           </div>
         </section>
         
-        <section id="projects" data-aos="fade-up" className="flex justify-center pt-40 pb-100 h-screen" style={{height: "170vh"}} >
+        <section id="projects" data-aos="fade-up" className="flex justify-center pt-40 pb-100 h-screen" style={{height: "180vh"}} >
           <Projects />
         </section>
 
-        <section id="contact" className="pt-40 h-screen" style={{height: "50vh", background: "#5f546450" }} data-aos="fade-up" >
+        <section id="contact" className="pt-30 h-screen" style={{height: "50vh", background: "#5f546450" }} data-aos="fade-down" >
           <Contact />
         </section>
 
       </div>
-
-
     </div>
   )
 }
