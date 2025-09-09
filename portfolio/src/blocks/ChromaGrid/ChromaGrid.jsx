@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./ChromaGrid.css";
+import { Link } from "react-router-dom";
 
 export const ChromaGrid = ({
   items,
@@ -26,7 +27,7 @@ export const ChromaGrid = ({
       handle: "@alexrivera",
       borderColor: "#4F46E5",
       gradient: "linear-gradient(145deg, #4F46E5, #000)",
-      url: "https://github.com/",
+      url: "/",
     },
     {
       image: "https://i.pravatar.cc/300?img=11",
@@ -35,7 +36,7 @@ export const ChromaGrid = ({
       handle: "@jordanchen",
       borderColor: "#10B981",
       gradient: "linear-gradient(210deg, #10B981, #000)",
-      url: "https://linkedin.com/in/",
+      url: "/",
     },
     {
       image: "https://i.pravatar.cc/300?img=3",
@@ -44,7 +45,7 @@ export const ChromaGrid = ({
       handle: "@morganblake",
       borderColor: "#F59E0B",
       gradient: "linear-gradient(165deg, #F59E0B, #000)",
-      url: "https://dribbble.com/",
+      url: "/",
     },
     {
       image: "https://i.pravatar.cc/300?img=16",
@@ -53,7 +54,7 @@ export const ChromaGrid = ({
       handle: "@caseypark",
       borderColor: "#EF4444",
       gradient: "linear-gradient(195deg, #EF4444, #000)",
-      url: "https://kaggle.com/",
+      url: "/",
     },
     {
       image: "https://i.pravatar.cc/300?img=25",
@@ -62,7 +63,7 @@ export const ChromaGrid = ({
       handle: "@thesamkim",
       borderColor: "#8B5CF6",
       gradient: "linear-gradient(225deg, #8B5CF6, #000)",
-      url: "https://github.com/",
+      url: "/",
     },
     {
       image: "https://i.pravatar.cc/300?img=60",
@@ -71,7 +72,7 @@ export const ChromaGrid = ({
       handle: "@tylerrod",
       borderColor: "#06B6D4",
       gradient: "linear-gradient(135deg, #06B6D4, #000)",
-      url: "https://aws.amazon.com/",
+      url: "/",
     },
   ];
   const data = items?.length ? items : demo;
@@ -143,27 +144,31 @@ export const ChromaGrid = ({
       onPointerLeave={handleLeave}
     >
       {data.map((c, i) => (
-        <article
-          key={i}
-          className="chroma-card"
-          onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
-          style={{
-            "--card-border": c.borderColor || "transparent",
-            "--card-gradient": c.gradient,
-            cursor: c.url ? "pointer" : "default",
-          }}
-        >
-          <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />
-          </div>
-          <footer className="chroma-info">
-            <h3 className="name">{c.title}</h3>
-            {c.handle && <span className="handle">{c.handle}</span>}
-            <p className="role">{c.subtitle}</p>
-            {c.location && <span className="location">{c.location}</span>}
-          </footer>
-        </article>
+        
+          <article
+            key={i}
+            className="chroma-card"
+            onMouseMove={handleCardMove}
+             onClick={() => handleCardClick(c.url)}
+            style={{
+              "--card-border": c.borderColor || "transparent",
+              "--card-gradient": c.gradient,
+              cursor: c.url ? "pointer" : "default",
+            }}
+          >
+            <Link to={c.url}>
+              <div className="chroma-img-wrapper">
+                <img src={c.image} alt={c.title} loading="lazy" />
+              </div>
+            </Link>
+            <footer className="chroma-info">
+              <h3 className="name">{c.title}</h3>
+              {c.handle && <span className="handle">{c.handle}</span>}
+              <p className="role">{c.subtitle}</p>
+              {c.location && <span className="location">{c.location}</span>}
+            </footer>
+          </article>
+        
       ))}
       <div className="chroma-overlay" />
       <div ref={fadeRef} className="chroma-fade" />

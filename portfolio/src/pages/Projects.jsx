@@ -4,6 +4,7 @@ import GradientText from "../blocks/GradientText/GradientText";
 function Projects() {
   const items = [
     {
+      id: "rideSharing",
       image: "./public/images/img1.png",
       title: "Ride Sharing App",
       subtitle: "Carpooling App for College Students",

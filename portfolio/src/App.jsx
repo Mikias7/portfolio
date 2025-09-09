@@ -60,7 +60,7 @@ function App() {
         <section id="contact" className="pt-30 h-screen" style={{height: "50vh", background: "#5f546450" }} data-aos="fade-down" >
           <Contact />
         </section>
-
+    {/* <Route path="/projects/:projectId" element={<ProjectDescription />} /> */}
       </div>
     </div>
   )
