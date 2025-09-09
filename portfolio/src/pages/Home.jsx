@@ -32,7 +32,7 @@ function Home(){
 
             <div>
                 <p className="text-xl flex justify-center p-2 px-20 text-justify text-neutral-950">
-                    ...Busy teaching machines to think while I figure out life...
+                    Python | C++ | Javascript | React | Swift | ML/AI | Computer Vision
                 </p>
             </div>
 

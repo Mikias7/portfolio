@@ -1,6 +1,6 @@
 import { Pass } from "postprocessing";
 import ProfileCard from "../blocks/ProfileCard/ProfileCard";
-import ProfileCard2 from "../blocks/ProfileCard/ProfileCard";
+import ProfileCard2 from "../blocks/ProfileCard2";
 // import myrainaLogo from "./public/images/myrainaLogo.png"
 
 // import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ function Experience(){
     }
 
     const handleClick = (data) => {
-        <DescriptionPage data={data}/>
+        
         
     }       
 

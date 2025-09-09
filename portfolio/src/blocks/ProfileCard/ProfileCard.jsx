@@ -312,16 +312,18 @@ const ProfileCardComponent = ({
                 </div>
                 
                 {/* <Link > */}
-                  <button
-                    className="pc-contact-btn"
-                    // onClick={handleContactClick}
-                    // onClick={}
-                    style={{ pointerEvents: "auto" }}
-                    type="button"
-                    aria-label={`Contact ${name || "user"}`}
-                  >
-                    {contactText}
-                  </button>
+                <Link to={"projects/MyRaina"}>
+                      <button
+                        className="pc-contact-btn"
+                        // onClick={handleContactClick}
+                        // onClick={}
+                        style={{ pointerEvents: "auto" }}
+                        type="button"
+                        aria-label={`Contact ${name || "user"}`}
+                      >
+                        {contactText}
+                    </button>
+                </Link>
                 {/* </Link> */}
                 
               </div>

@@ -58,6 +58,20 @@ const items = {
       img: "",
       github: "",  
     },
+    MyRaina: {
+        id: "MyRaina",
+        title: "Software Engineering Intern",
+        from: "May 2024 - August 2024",
+        description: "Developed machine learning algorithms to track and analyze assistive device usage, aiming to prevent elder care falls. Built data pipelines for preprocessing and augmenting assistive device images, optimizing model accuracy. Created synthetic image generation software to diversify datasets and minimize overfitting. Developed a React component with custom hooks and API integration to display assistive device misuse results and inform caregivers. ",
+        route: "MyRaina"
+    },
+    CTDI: {
+        id: "CTDI",
+        title: "Software Engineering Intern",
+        from: "May 2024 - August 2024",
+        description: "Automated Amazon product testing using a robotic arm, reducing testing time by 45% and earning recognition from the CEO for improving efficiency. Designed and implemented a motion recording and playback mechanism for robotic arms, reducing development times. Leveraged computer vision to enhance the precision of robotic arm movements, optimizing accuracy in testing workflows.",
+        route: "CTDI"
+    }
 
 };
 
@@ -88,15 +102,35 @@ function DesciptionPage(){
                     >
                     {item.id}
                 </GradientText>
+
+                <div className="text-xl relative z-10 flex justify-center flex-row-reverse">
+                  <p>{item.title ? item.title : ""}</p>
+                </div>
+
+                <div className="text-base relative z-10 flex justify-center flex-row-reverse">
+                  <p>{item.from ? item.from : ""}</p>
+                </div>
+
                 
               </div>
 
               <div className="p-8">
-                  <p>{item.from}</p>
+                  {/* <p>{item.from}</p> */}
               </div>
 
               <div>
                   <p>{item.description}</p>
+              </div>
+
+              <div className="pt-8">
+                <button
+                    type="button"
+                    className="flex justify-center pt-3 card-nav-cta-button hidden md:inline-flex w-20 h-12 border-0 rounded-[calc(0.75rem-0.2rem)] font-medium cursor-pointer transition-colors duration-300 ease-out hover:!bg-pink-500"
+                    style={{ backgroundColor: "#6016c0ff", color: "#fff" }}
+                    onClick={""}
+                >
+                    Go Back
+                </button>
               </div>
             </div>
             
