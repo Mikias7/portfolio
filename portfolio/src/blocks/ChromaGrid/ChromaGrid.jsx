@@ -118,7 +118,8 @@ export const ChromaGrid = ({
 
   const handleCardClick = (url) => {
     if (url) {
-      window.open(url, "_blank", "noopener,noreferrer");
+      // window.open(url, "_blank", "noopener,noreferrer");
+      window.location.href = url; 
     }
   };
 

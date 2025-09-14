@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Nav from "./Nav";
 import LiquidEther from "../blocks/LiquidEther/LiquidEther";
 import GradientText from "../blocks/GradientText/GradientText";
+import { Link } from "react-router-dom";
 
 const items = {
     rideSharing: {
@@ -81,7 +82,7 @@ function DesciptionPage(){
     const item = items[itemsId];
 
     return (
-        <div className="relative w-full h-screen" style={{height: "100vh", background: "#e7b2ee50"}}>
+        <div className="flex justify-center relative w-full h-screen" style={{height: "100vh", background: "#e7b2ee50"}}>
 
           
             <div>
@@ -92,7 +93,7 @@ function DesciptionPage(){
               <LiquidEther />
             </div>
 
-            <div className="pt-60">
+            <div className="pt-60 relative z-10">
               <div className="text-6xl relative z-10">
                 <GradientText
                     colors={["#000000ff", "#ff40dfff", "#ff40dfff", "#ff40dfff", "#ff40dfff"]}
@@ -118,19 +119,26 @@ function DesciptionPage(){
                   {/* <p>{item.from}</p> */}
               </div>
 
-              <div>
-                  <p>{item.description}</p>
+              <div
+                className="shadow-2xl mx-auto flex justify-center"
+                style={{ backgroundColor: "#8a16c015", width: "60%" }}
+              >
+                <p>{item.description}</p>
               </div>
 
-              <div className="pt-8">
-                <button
-                    type="button"
-                    className="flex justify-center pt-3 card-nav-cta-button hidden md:inline-flex w-20 h-12 border-0 rounded-[calc(0.75rem-0.2rem)] font-medium cursor-pointer transition-colors duration-300 ease-out hover:!bg-pink-500"
-                    style={{ backgroundColor: "#6016c0ff", color: "#fff" }}
-                    onClick={""}
-                >
-                    Go Back
-                </button>
+
+              <div className="pt-8 mx-auto flex flex-row"
+              style={{ width: "60%" }}>
+                <Link to={"/"}>
+                  <button
+                      type="button"
+                      className="flex justify-center pt-3 card-nav-cta-button hidden md:inline-flex w-20 h-12 border-0 rounded-[calc(0.75rem-0.2rem)] font-medium cursor-pointer transition-colors duration-300 ease-out hover:!bg-pink-500"
+                      style={{ backgroundColor: "#6016c0ff", color: "#fff" }}
+                      onClick={""}
+                  >
+                      Go Back
+                  </button>
+                </Link>
               </div>
             </div>
             
